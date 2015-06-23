@@ -34,4 +34,11 @@ $("#gallery a").click(function(event) {
 $overlay.click(function() {
   $overlay.hide();
 });
-// Hide overlay
+
+
+//contact picture link
+var $link = $('<a href="mailto:bcronin74@gmail.com"></a>');
+var $image = $('<img id="brian" src="img/brian1.jpg" alt="Brian Cronin">')
+$(".contactpic").append($link);
+$($link).append($image);
+

@@ -38,7 +38,7 @@ $overlay.click(function() {
 
 //contact picture link
 var $link = $('<a href="mailto:bcronin74@gmail.com"></a>');
-var $image = $('<img id="brian" src="img/brian1.jpg" alt="Brian Cronin">')
+var $brian = $('<img id="brian" src="img/brian1.jpg" alt="Brian Cronin">')
 $(".contactpic").append($link);
-$($link).append($image);
+$($link).append($brian);
 

@@ -9,11 +9,16 @@ body {
 	font-size: 1.6em;
 }
 
-h1, .about, .contact, ol, td {
+h1, .about, .contact, ol {
 	text-align: center;
 	background-color: #CCC;
 	display: block;
 	padding: 0;
+}
+
+td, th {
+	text-align: center;
+	display: table-cell;
 }
 
 h1 {

@@ -1,178 +1,109 @@
 @charset "UTF-8";
 /* CSS Document */
-
-*{
-font-family: Helvetica, Arial, sans-serif;	
-}
+/*****
+	h2 = headings in specs, h3=drum subheadings in specs
+*****/
 
 body {
-	height: 100%;
-	width: 100%;
+	background-color: #CCC;
+	font-size: 1.6em;
+}
+
+h1, .about, .contact, ol, td {
+	text-align: center;
 	background-color: #CCC;
 	display: block;
 	padding: 0;
 }
 
-a {
-  color:inherit;
- }
-
-h1, h2, h5, #about, #rates, .audio, ol.artists, .contact, #mobilenav, #speclink, #mobileindex {
-	text-align: center;	
+h1 {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: 1.4em;
 }
 
-h5 {
-	font-size: 1.1em;
-	margin-bottom: 0;
-	padding-bottom: 0;
+h2 {
+	font-size: 1.2em;
 }
 
-#speclink, #mobilenav{
-	font-size:1.5em;
-	line-height:150%;
+h3 {
+	font-size: 1em;
 }
 
+ .about {
+	margin-top: 5px;
+}
+
+.btn-default:hover {
+	background-color: #adadad;
+}
+
+a, a:visited {
+	color: #000;
+}
 /*
 lists
 */
 
-#specnav, #mobilenav, #speclink, li {
-	list-style-type: none;
-}
-
-#gallery li, .nav li {	
+/*#gallery li, .nav li {
 	display: inline;
-}
+}*/
 
 /*
-about
+containers
 */
+.container {
+	max-width: 920px;
+}
+
+.container.rates {
+	max-width: 500px;
+}
+
+.container.artists {
+	max-width: 800px;
+}
+
+.container.email {
+	max-width: 200px;
+}
+
 .panorama {
-	display: block;
-    margin-left: 2%;
-    margin-right: 2%;
-	width: 96%;
-}
-
-/*
-specs
-*/
-
-#wrapper {
-	display:none;
-}
-		
-#wrapper ul, #mobilenav {
-	margin: 0;
-	-moz-column-break-inside:avoid;		/*necessary for FF?*/
-	-webkit-column-break-inside: avoid; /* Chrome, Safari */
-	page-break-inside: avoid;           /* Theoretically FF 20+ */
-	break-inside: avoid-column;         /* IE 11 */
-	display:table;                      /* Actually FF 20+ */
-	width: 90%;
-}
-
-#mobilenav {
-	display:inherit;
-   -moz-column-count: 2;
-   -moz-column-gap: 40px;
-   -webkit-column-count: 2;
-   -webkit-column-gap: 40px;
-    column-count: 2;
-	column-gap: 40px;
-	overflow: hidden;
-}
-	
-#drumspec {
-	font-size: .9em;
-	padding: 0;
-	margin: 2% 0;
-	font-weight: bolder;
-}
-
-#specnav, #mobilenav {
-	font-size:2.6em;
-}
-
-@media all and (min-width: 735px) {	
-	#specnav {
-		display:none;
-	}
-	div#wrapper {
-	display:inherit;
-   -moz-column-count: 2;
-   -moz-column-gap: 40px;
-   -webkit-column-count: 2;
-   -webkit-column-gap: 40px;
-    column-count: 2;
-	column-gap: 40px;
-	width: 100%;
-	overflow: hidden;
-	}
-}
-
-@media all and (min-width:575px) {
-	#artistdiv {
-			display:inherit;
-   -moz-column-count: 2;
-   -moz-column-gap: 40px;
-   -webkit-column-count: 2;
-   -webkit-column-gap: 40px;
-    column-count: 2;
-	column-gap: 40px;
-	overflow: hidden;
-	}
-}
-
-/*
-pictures
-*/
-#photo {
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;	
-	max-height: 200px;
-	width: auto;
-	overflow: hidden;
+	padding-bottom: 10px;
 }
 
 /*
 contact
 */
-#brian {
+
+#gallery li, ol {
+	display: inline;
+	list-style-type: none;
+}
+
+#photo {
 	max-height: 200px;
 	width: auto;
+}
+
+#brian {
+	max-height: 200px;
+	max-width: 200px;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;	
+	-moz-border-radius: 150px;
+	margin-left: -15px;
 }
 
-/*
-navigation menu
-*/
-
-.nav li+li {
-	border-left: 1px solid #000000;
-	padding-left: 5px;
-	padding-right: 5px;
+@media (max-width: 768px) {
+	#photo {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	#gallery {
+		padding: 0;
+	}
 }
-
-.nav {
-	text-align: center;
-	color: #FFF;
-	position:fixed;
-	width:100%;
-	height:50px;
-	bottom:0px;
-	background-color: #CCC;
-	background: rgba(0,0,0,.5);
-}
-
-.nav ol li a:hover {
-	color: #fff;
-	background-color: #ccc;
-}
-
 
 /*
 lightbox
@@ -186,7 +117,7 @@ lightbox
 	right: 0;
 	top: 0;
 	bottom: 0;
-	text-align: center;	
+	text-align: center;
 	position: fixed;
 	display: none;
 }
@@ -200,9 +131,10 @@ lightbox
 	max-width: 90%;
 	border-radius: 20px;
 	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;	
+	-moz-border-radius: 20px;
 }
 
 #overlay p {
- color: white;
+	color: white;
+	font-size: 1.5em;
 }

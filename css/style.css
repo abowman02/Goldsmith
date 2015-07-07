@@ -5,12 +5,9 @@
 font-family: Helvetica, Arial, sans-serif;	
 }
 
-html, body {
+body {
 	height: 100%;
 	width: 100%;
-}
-
-body {
 	background-color: #CCC;
 	display: block;
 	padding: 0;
@@ -20,15 +17,31 @@ a {
   color:inherit;
  }
 
-h1, h2, #about, #rates, .audio, ol.artists, .contact {
+h1, h2, h5, #about, #rates, .audio, ol.artists, .contact, #mobilenav, #speclink, #mobileindex {
 	text-align: center;	
 }
 
 h5 {
 	font-size: 1.1em;
-	text-align: center;
 	margin-bottom: 0;
 	padding-bottom: 0;
+}
+
+#speclink, #mobilenav{
+	font-size:1.5em;
+	line-height:150%;
+}
+
+/*
+lists
+*/
+
+#specnav, #mobilenav, #speclink, li {
+	list-style-type: none;
+}
+
+#gallery li, .nav li {	
+	display: inline;
 }
 
 /*
@@ -44,7 +57,49 @@ about
 /*
 specs
 */
-div#wrapper {
+
+#wrapper {
+	display:none;
+}
+		
+#wrapper ul, #mobilenav {
+	margin: 0;
+	-moz-column-break-inside:avoid;		/*necessary for FF?*/
+	-webkit-column-break-inside: avoid; /* Chrome, Safari */
+	page-break-inside: avoid;           /* Theoretically FF 20+ */
+	break-inside: avoid-column;         /* IE 11 */
+	display:table;                      /* Actually FF 20+ */
+	width: 90%;
+}
+
+#mobilenav {
+	display:inherit;
+   -moz-column-count: 2;
+   -moz-column-gap: 40px;
+   -webkit-column-count: 2;
+   -webkit-column-gap: 40px;
+    column-count: 2;
+	column-gap: 40px;
+	overflow: hidden;
+}
+	
+#drumspec {
+	font-size: .9em;
+	padding: 0;
+	margin: 2% 0;
+	font-weight: bolder;
+}
+
+#specnav, #mobilenav {
+	font-size:2.6em;
+}
+
+@media all and (min-width: 735px) {	
+	#specnav {
+		display:none;
+	}
+	div#wrapper {
+	display:inherit;
    -moz-column-count: 2;
    -moz-column-gap: 40px;
    -webkit-column-count: 2;
@@ -53,32 +108,20 @@ div#wrapper {
 	column-gap: 40px;
 	width: 100%;
 	overflow: hidden;
+	}
 }
 
-div#wrapper ul {
-    margin: 0;
-    -webkit-column-break-inside: avoid; /* Chrome, Safari */
-    page-break-inside: avoid;           /* Theoretically FF 20+ */
-    break-inside: avoid-column;         /* IE 11 */
-    display:table;                      /* Actually FF 20+ */
-	width: 90%;
-	/*float: left;
-	display: inline;*/
-}
-
-#drumspec {
-	font-size: .9em;
-	padding: 0;
-	margin: 2% 0;
-	font-weight: bolder;
-}
-
-/*
-artists
-*/
-
-ol.artists li {
-	list-style-type: none;
+@media all and (min-width:575px) {
+	#artistdiv {
+			display:inherit;
+   -moz-column-count: 2;
+   -moz-column-gap: 40px;
+   -webkit-column-count: 2;
+   -webkit-column-gap: 40px;
+    column-count: 2;
+	column-gap: 40px;
+	overflow: hidden;
+	}
 }
 
 /*
@@ -93,12 +136,6 @@ pictures
 	overflow: hidden;
 }
 
-#gallery li {
-	list-style-type: none;	
-	display: inline;
-}
-
-
 /*
 contact
 */
@@ -110,14 +147,9 @@ contact
 	-moz-border-radius: 150px;	
 }
 
-
 /*
 navigation menu
 */
-.nav li {
-	display: inline-block;
-	float: none;
-}
 
 .nav li+li {
 	border-left: 1px solid #000000;

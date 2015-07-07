@@ -5,40 +5,30 @@ $(".navigation").each(function(){
         inc.replaceWith(data);
     });
 });
-
+//end nav menu
 
 //lightbox for gallery
 var $overlay = $('<div id="overlay"></div>')
 var $image = $("<img>");
 var $caption = $("<p></p>");
-
+//create overlay
 $("body").append($overlay);
 $overlay.append($image);
 $overlay.append($caption);
-
-// Capture click event on link to an image
+// capture click event on link to an image
 $("#gallery a").click(function(event) {
   //prevent leaving page
   event.preventDefault();
   var imageLocation = $(this).attr("href")
-  // Update overlay with the clicked image
-  $image.attr("src", imageLocation);  
+  // update overlay with the clicked image
+  $image.attr("src", imageLocation);
   $overlay.show();
-  // Get child's alt attribute and set caption
+  // get child's alt attribute and set caption
   var captionText = $(this).children("img").attr("alt");
   $caption.text(captionText);
 });
-
-
-// When overlay is clicked
+// when overlay is clicked
 $overlay.click(function() {
   $overlay.hide();
 });
-
-
-//contact picture link
-var $link = $('<a href="mailto:bcronin74@gmail.com"></a>');
-var $brian = $('<img id="brian" src="img/brian1.jpg" alt="Brian Cronin">')
-$(".contactpic").append($link);
-$($link).append($brian);
-
+//end lightbox

@@ -43,16 +43,31 @@ h3 {
 	background-color: #adadad;
 }
 
+.navbar-btn {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.btn-default {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+}
+
 a, a:visited {
 	color: #000;
 }
-/*
-lists
-*/
 
-/*#gallery li, .nav li {
-	display: inline;
-}*/
+footer a {
+	text-decoration: underline;
+}
+
+footer {
+	font-size: 85%;
+	text-align: center;
+	width: 100%;
+	bottom: 0;
+	margin-top: 15px;
+}
 
 /*
 containers
@@ -141,5 +156,5 @@ lightbox
 
 #overlay p {
 	color: white;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }

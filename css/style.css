@@ -65,8 +65,14 @@ footer {
 	font-size: 85%;
 	text-align: center;
 	width: 100%;
-	bottom: 0;
 	margin-top: 15px;
+	bottom: 0;
+}
+
+@media (min-height: 660px) {
+	.copyright {
+	position: absolute;
+	}
 }
 
 /*

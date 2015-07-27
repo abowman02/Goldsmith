@@ -4,9 +4,16 @@
 	h2 = headings in specs, h3=drum subheadings in specs
 *****/
 
+/*html is for footer*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
 	background-color: #CCC;
 	font-size: 1.6em;
+	margin-bottom: 45px; /*the footer's height*/
 }
 
 h1, .about, .contact, ol {
@@ -61,12 +68,14 @@ footer a {
 	text-decoration: underline;
 }
 
-footer {
-	font-size: 85%;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 45px;
 	text-align: center;
-	width: 100%;
-	margin-top: 15px;
-	bottom: 0;
+	font-size: 85%;
 }
 
 @media (min-height: 660px) {
@@ -76,11 +85,21 @@ footer {
 }
 
 /*
+@media (min-width: 1075px), (min-height: 600px) {
+	.copy {
+	position: absolute;
+	}
+}
+*/
+
+/*
 containers
 */
+
 .container {
 	max-width: 920px;
 }
+
 
 .container.rates {
 	max-width: 500px;
@@ -105,12 +124,21 @@ contact
 #gallery li, ol {
 	display: inline;
 	list-style-type: none;
+	overflow: visible;
 }
 
 #photo {
 	max-height: 200px;
 	width: auto;
+	margin-right: 2px;
+	margin-bottom: 6px;
 }
+
+/*
+.photos {
+	text-align: center;
+}
+*/
 
 #brian {
 	max-height: 200px;

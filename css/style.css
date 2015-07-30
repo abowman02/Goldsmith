@@ -16,7 +16,7 @@ body {
 	margin-bottom: 45px; /*the footer's height*/
 }
 
-h1, .about, .contact, ol {
+h1, .about, .contact, ol, ul {
 	text-align: center;
 	background-color: #CCC;
 	display: block;

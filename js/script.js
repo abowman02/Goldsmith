@@ -7,7 +7,7 @@ $(".navigation").each(function(){
 });
 //end nav menu
 
-//lightbox for gallery
+//lightbox for photo gallery
 var $overlay = $('<div id="overlay"></div>')
 var $image = $("<img>");
 var $caption = $("<p></p>");
@@ -22,10 +22,11 @@ $("#gallery a").click(function(event) {
   var imageLocation = $(this).attr("href")
   // update overlay with the clicked image
   $image.attr("src", imageLocation);
-  $overlay.show();
   // get child's alt attribute and set caption
   var captionText = $(this).children("img").attr("alt");
   $caption.text(captionText);
+  // display lightbox
+  $overlay.show();
 });
 // when overlay is clicked
 $overlay.click(function() {

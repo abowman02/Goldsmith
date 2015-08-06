@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /* CSS Document */
-/*****
-	h2 = headings in specs, h3=drum subheadings in specs
-*****/
 
 /*html is for footer*/
 html {
@@ -23,9 +20,8 @@ h1, .about, .contact, ol, ul {
 	padding: 0;
 }
 
-td, th {
-	text-align: center;
-	display: table-cell;
+ .about {
+	margin-top: 5px;
 }
 
 h1 {
@@ -42,10 +38,13 @@ h3 {
 	font-size: 1em;
 }
 
- .about {
-	margin-top: 5px;
+/*rates table*/
+td, th {
+	text-align: center;
+	display: table-cell;
 }
 
+/*navbar stylings*/
 .btn-default:hover {
 	background-color: #adadad;
 }
@@ -57,13 +56,37 @@ h3 {
 
 .btn-default {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-	background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+	background-image: -webkit-linear-gradient(#ffffff 0%, #e0e0e0 100%);
+	background: -o-linear-gradient(#ffffff 0%, #e0e0e0 100%);
+ 	background: -moz-linear-gradient(#ffffff 0%, #e0e0e0 100%);
+  	background: linear-gradient(#ffffff 0%, #e0e0e0 100%);
 }
 
 a, a:visited {
 	color: #000;
 }
 
+/*
+containers
+*/
+.container {
+	max-width: 920px;
+}
+
+
+.container.rates {
+	max-width: 500px;
+}
+
+.container.artists {
+	max-width: 800px;
+}
+
+.panorama {
+	padding-bottom: 10px;
+}
+
+/*footer stylings*/
 footer a {
 	text-decoration: underline;
 }
@@ -85,42 +108,8 @@ footer a {
 }
 
 /*
-@media (min-width: 1075px), (min-height: 600px) {
-	.copy {
-	position: absolute;
-	}
-}
+pictures
 */
-
-/*
-containers
-*/
-
-.container {
-	max-width: 920px;
-}
-
-
-.container.rates {
-	max-width: 500px;
-}
-
-.container.artists {
-	max-width: 800px;
-}
-
-.container.email {
-	max-width: 200px;
-}
-
-.panorama {
-	padding-bottom: 10px;
-}
-
-/*
-contact
-*/
-
 #gallery li, ol {
 	display: inline;
 	list-style-type: none;
@@ -134,15 +123,7 @@ contact
 	margin-bottom: 6px;
 }
 
-/*
-.photos {
-	text-align: center;
-}
-*/
-
 #brian {
-	max-height: 200px;
-	max-width: 200px;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
